@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{target.database}}"
+    schema: HEVO_PUBLIC
+    tables:
+      - name: raw_customers
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+
+      - name: raw_orders
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: user_id
+            tests:
+              - not_null
+
+      - name: raw_payments
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+models:
+  - name: stg_orders
+    columns:
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+  - name: stg_payments
+    columns:
+      - name: order_id
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
