@@ -1,0 +1,19 @@
+name: HEVO_CXE_TEST
+version: 1.0.0
+config-version: 2
+profile: HEVO_CXE_TEST
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  HEVO_CXE_TEST:
+    +materialized: view
