@@ -118,7 +118,7 @@ Through experimentation, I confirmed that `build` ensures model creation before 
 <img width="1167" height="236" alt="Build Test 1" src="https://github.com/user-attachments/assets/8fe785f4-c736-445e-813a-bacb62166cd0" />
 <img width="1147" height="125" alt="Build Test 2" src="https://github.com/user-attachments/assets/51027292-9cf2-46bf-b220-1bb5ce109dc8" />
 
-Test Output screenshots of both test commands are included to demonstrate this comparison.
+Test Output screenshots of both 'test' and 'build' commands are included to demonstrate this comparison. 'build' auto-tested tables and Views creation.
 
 ---
 
